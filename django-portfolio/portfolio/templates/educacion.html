@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="title-experiencia">Educación</h2>
+    <div class="row">
+        {% for educacion in Educaciones %}
+        <div class="col-md-6">
+            <div class="card mb-3" style="background-color: #f8f9fa;">  <!-- Color de fondo claro -->
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #2c3e50;">{{ educacion.titulo }}</h5>
+                    <p class="card-text"style="color: #2c3e50;"><strong>Institución:</strong> {{ educacion.institucion }}</p>
+                    <p class="card-text"style="color: #2c3e50;"><strong>Años:</strong> {{ educacion.anio_inicio }} - {{ educacion.anio_fin }}</p>
+                    <p class="card-text"style="color: #2c3e50;">{{ educacion.descripcion }}</p>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p class="text-white">No se encontraron registros de educación.</p>
+        {% endfor %}                                 
+    </div>
+</div>
+{% endblock %}

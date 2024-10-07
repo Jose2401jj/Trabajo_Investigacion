@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="title-experiencia">Experiencia - Cursos Realizados</h2>
+    <div class="row">
+        {% for experiencia in experiencias %}
+        <div class="col-md-4">
+            <div class="card mb-3"
+                style="background-color: #ffffff; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #2c3e50;">{{ experiencia.institucion_del_curso }}</h5>
+                    <p class="card-text" style="color: #555;">{{ experiencia.descripcion_curso }}</p>
+                    <p style="color: #555;"><strong>Fecha:</strong> {{ experiencia.fecha_curso }}</p>
+                    <p style="color: #555;"><strong>Horas:</strong> {{ experiencia.numero_horas }} horas</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

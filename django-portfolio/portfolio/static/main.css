@@ -1,0 +1,40 @@
+body {
+    background: #090909;
+}
+
+.bg-black {
+    background: #000;
+}
+
+.card-project:hover {
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.blur-background {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    pointer-events: none;
+}
+
+.title-experiencia {
+    color: #f8f9fa;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.card-body {
+    color: black; 
+}
+
+.card-body h5 {
+    color: #333; 
+}
+
+.card-body p {
+    color: #555; 
+}
+
